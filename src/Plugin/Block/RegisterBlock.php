@@ -59,6 +59,7 @@ class RegisterBlock extends BlockBase {
       '#theme' => 'delicious_login_blocks',
       '#link_text' => $this->configuration['register_link_text'],
       '#link_url' => Url::fromRoute('user.register'),
+      '#plugin_id' => $this->getPluginId(),
     ];
   }
 

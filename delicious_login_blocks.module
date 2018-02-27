@@ -32,6 +32,7 @@ function delicious_login_blocks_theme() {
       'variables' => [
         'link_text' => '',
         'link_url' => '',
+        'plugin_id' => '',
       ],
     ],
   ];
@@ -44,4 +45,13 @@ function delicious_login_blocks_preprocess_block(&$variables) {
   if ($variables['configuration']['provider'] == 'delicious_login_blocks') {
     $variables['attributes']['class'][] = 'text-center';
   }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function delicious_login_blocks_theme_suggestions_delicious_login_blocks(array $variables) {
+  $suggestions = array();
+  $suggestions[] = 'delicious_login_blocks__' . $variables['plugin_id'];
+  return $suggestions;
 }
