@@ -1,0 +1,1 @@
+Provides blocks with links to login and register pages.

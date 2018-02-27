@@ -1,0 +1,5 @@
+name: Delicious Login Blocks
+type: module
+description: Login and register blocks with links to forms.
+core: 8.x
+package: Blocks

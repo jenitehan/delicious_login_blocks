@@ -1,0 +1,47 @@
+<?php
+
+/**
+ * @file
+ * Contains delicious_login_blocks.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function delicious_login_blocks_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the delicious_login_blocks module.
+    case 'help.page.delicious_login_blocks':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Login and register blocks with links to forms.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function delicious_login_blocks_theme() {
+  return [
+    'delicious_login_blocks' => [
+      'variables' => [
+        'link_text' => '',
+        'link_url' => '',
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements template_preprocess_block().
+ */
+function delicious_login_blocks_preprocess_block(&$variables) {
+  if ($variables['configuration']['provider'] == 'delicious_login_blocks') {
+    $variables['attributes']['class'][] = 'text-center';
+  }
+}
