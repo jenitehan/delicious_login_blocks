@@ -16,15 +16,14 @@ use Drupal\Core\Url;
  */
 class RegisterBlock extends BlockBase {
 
-
   /**
    * {@inheritdoc}
    */
   public function defaultConfiguration() {
     return [
-        'label' => $this->t("Don't have an account?"),
-        'register_link_text' => $this->t('Sign up now'),
-      ] + parent::defaultConfiguration();
+      'label' => $this->t("Don't have an account?"),
+      'register_link_text' => $this->t('Sign up now'),
+    ] + parent::defaultConfiguration();
   }
 
   /**

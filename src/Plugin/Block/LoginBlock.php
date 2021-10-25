@@ -16,15 +16,14 @@ use Drupal\Core\Url;
  */
 class LoginBlock extends BlockBase {
 
-
   /**
    * {@inheritdoc}
    */
   public function defaultConfiguration() {
     return [
-        'label' => $this->t('Already registered?'),
-        'login_link_text' => $this->t('Log in now'),
-      ] + parent::defaultConfiguration();
+      'label' => $this->t('Already registered?'),
+      'login_link_text' => $this->t('Log in now'),
+    ] + parent::defaultConfiguration();
   }
 
   /**

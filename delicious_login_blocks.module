@@ -51,7 +51,7 @@ function delicious_login_blocks_preprocess_block(&$variables) {
  * Implements hook_theme_suggestions_HOOK().
  */
 function delicious_login_blocks_theme_suggestions_delicious_login_blocks(array $variables) {
-  $suggestions = array();
+  $suggestions = [];
   $suggestions[] = 'delicious_login_blocks__' . $variables['plugin_id'];
   return $suggestions;
 }
