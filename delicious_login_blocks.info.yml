@@ -2,5 +2,5 @@ name: Delicious Login Blocks
 type: module
 description: Login and register blocks with links to forms.
 core: 8.x
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^8 || ^9 || ^10
 package: Blocks
